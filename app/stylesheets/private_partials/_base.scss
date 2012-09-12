@@ -1,0 +1,61 @@
+@import "compass/css3/text-shadow";
+
+
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+
+$blueprint-grid-columns: 24;
+$blueprint-container-size: 950px;
+$blueprint-grid-margin: 10px;
+
+// Use this to calculate the width based on the total width.
+// Or you can set $blueprint-grid-width to a fixed value and unset $blueprint-container-size -- it will be calculated for you.
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin) / $blueprint-grid-columns - $blueprint-grid-margin;
+
+
+
+// basic colors
+$bg-color: #eee;
+$font-color: #3A4147;
+$blue-color: #6B8098;
+
+
+// Basic css
+
+body {
+  background-color: white;
+  font-family: "Verdana";
+  font-size: 16px;
+  color: $font-color;
+
+  #container {
+    background-color: $bg-color;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+    padding-bottom: 2em;
+  }
+  
+  li {
+    display: inline;
+    list-style: none;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+}
+
+// Separations
+
+.clear {
+  clear:both;
+  height: 2em;
+  overflow:hidden;
+}
+.separations {
+  background-image: url("/images/h1_separation.png");
+  background-repeat: repeat-x;
+  height: 0.4em;
+  margin-bottom: 2em;
+}

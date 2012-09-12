@@ -1,0 +1,37 @@
+%h1 Listado de páginas dinámicas
+.separations
+
+
+%p.show_and_newlink
+  = link_to "Crear", new_admin_page_path
+  una nueva página
+
+%table
+  %tr
+    %th Identificador
+    %th Contenidos por idiomas
+
+  - @pages.each do |page|
+    %tr
+      %td
+        = page.key
+        %ul.sub_options
+          %li= link_to "Eliminar", [:admin, page], :method => :delete, :confirm => "Seguro que quieres borrar esta pagina y todos sus contenidos?"
+      %td
+        - page.page_contents.each do |content|
+          %ul
+            %li
+              Idioma: #{ content.locale }
+            %li
+              Url: #{content.url}
+          %ul.sub_options
+            %li= link_to "Editar contenido", edit_admin_page_path(page)
+            %li= link_to "Editar URL", edit_admin_page_page_content_path(page, content)
+            %li= link_to "Eliminar", [:admin, page, content], :method => :delete, :confirm => "Seguro que quiere eliminar esta pagina?"
+
+      %td
+        %p
+          - unless page.has_all_locales?
+            nuevo idioma para esta página.
+            %ul.sub_options
+              %li= link_to "Crear", new_admin_page_page_content_path(page)

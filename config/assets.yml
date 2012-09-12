@@ -1,0 +1,22 @@
+package_assets:         always      # (on, off, always)
+embed_assets:           datauri     # (on, off, datauri)
+compress_assets:        on          # (on, off)
+gzip_assets:            on          # (on, off)
+template_function:      _.template  # (defaults to the built-in micro-templating)
+package_path:           packages    # (defaults to assets)
+javascript_compressor:  closure     # (yui, closure)
+# compressor_options:
+#   compilation_level: ADVANCED_OPTIMIZATIONS
+
+javascripts:
+  frontend:
+    - public/javascripts/jquery-1.5.1.js
+    - public/javascripts/jquery-ui-1.8.11.min.js
+    - public/javascripts/rails.js
+    - public/javascripts/facebox.js
+    - public/javascripts/jquery.flexslider.js
+    - public/javascripts/application.js
+
+stylesheets:
+  screen:
+    - public/stylesheets/screen.css

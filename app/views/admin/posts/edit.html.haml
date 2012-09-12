@@ -1,0 +1,8 @@
+%h1 Editar noticia
+.separations
+
+= render 'form'
+
+.show_and_newlink= link_to 'Mostrar', [:admin, @post]
+
+.back_link= link_to 'Atrás', admin_posts_path

@@ -1,0 +1,18 @@
+body.grid {
+  #container {
+    @include container;
+  }
+
+  #menu {
+    @include span(24);
+  }
+  
+  .twelve_col{
+    @include column(5);
+  }
+  
+  .six_col{
+    @include column(6);
+  }
+
+}

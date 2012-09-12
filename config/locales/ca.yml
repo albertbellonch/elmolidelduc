@@ -1,0 +1,50 @@
+ca:
+  header:
+    localization: "Localització"
+    contact: "Contacte"
+  form:
+    name: "Nom"
+    email: "Correu"
+    phone: "Telèfon"
+    message: "Missatge"
+    send: "Enviar"
+  menu:
+    moli: "El Molí del Duc"
+    farinera: "L'antiga Farinera"
+    galeria: "Espais i events"
+  content:
+    moli:
+      paragraph_1: "El Molí Del Duc és un complex per a celebracions que gira al voltant de l’antiga Farinera de Corbins construïda al 1929 i que actualment es troba en un estat de conservació excel·lent."
+      paragraph_2: "Al Molí del Duc disposem d’espais on la historia i la tradició de la comarca es barregen amb la cuina de qualitat més actual; ingredients que us portaran a passar una vetllada inoblidable."
+      paragraph_3: "El recorregut s’inicia als Jardins, per un camí sinuós que travessa la cascada (salt d’aigua) que antigament movia tota la farinera. A continuació es pot fer una visita guiada a l’antic moli, per després accedir als jardins superiors dotats d’una vista panoràmica de l’horta de Lleida. Les sales són els antics graners rehabilitats, on ressalta l’espectacular coberta d’encavallades de fusta que crea un ambient molt agradable combinat amb la il·luminació idònia."
+      paragraph_4: "Al Molí del Duc un equip de professionals treballen dia a dia per aconseguir que cada vetllada sigui única i especial."
+    farinera:
+      paragraph_1: "El Molí del Duc gira al voltant de l’antiga farinera de Corbins. Al 1929 va començar l’activitat industrial en aquest complex com a una de les farineres de referència de la comarca, tot i que l’assentament moliner data del segle XVIII; i encara avui es conserven les primeres pedres que en formaven part."
+      paragraph_2: "Al 1929 es construeix el molí tal i com és a l’actualitat aprofitant el salt d’aigua de la sèquia de rec que passa entre Corbins i Torrelameu. Amb l’energia mecànica que es produeix gràcies a una turbina es fa funcionar el sistema de corretges que mou totes les màquines de la fàbrica."
+      paragraph_3: "La farinera es concentra en un edifici de soterrani i tres plantes. Tant les màquines com els tubs són de fusta, material que converteix el molí en una peça de gran bellesa estètica."
+      paragraph_4: "L’any 1980 es va optar pel tancament de la indústria ja que la maquinària s’havia quedat obsoleta. Vint anys més tard van començar els treballs de restauració perquè es pogués obrir al públic un punt tant significatiu del patrimoni històric de la nostra terra."
+    galeria:
+      paragraph_1: "<b>Espais</b>"
+      paragraph_2:
+        "<ul>
+          <li> - <b>El Graner</b>: és la sala principal del complex, on antigament s’emmagatzemava el blat. Amb capacitat per 300 persones.</li>
+          <li> - <b>Sala Rosa</b>: Sala per 100 persones amb vistes panoràmiques de Corbins i de l’horta de Lleida.</li>
+          <li> - <b>Jardins exteriors</b>: La zona enjardinada gaudeix d’una panoràmica que cobreix bona part de la comarca.</li>
+          <li> - <b>Cuina</b>: Al Molí del Duc trobareu cuina actual de qualitat i de la terra.</li>
+          <li> - <b>Sala per celebracions Civils</b>: Es pot habilitar tant aquesta sala com el jardí per aquest tipus de celebracions.</li>
+          <li> - <b>Aparcament</b>: Més de 400 places d’aparcament, zona especial reservada per nuvis i família mes propera</li>
+        </ul>"
+      paragraph_3: "<b>Events</b>"
+      paragraph_4:
+        "<ul>
+          <li> - Bodes / Banquets
+          <li> - Comunions / Bateigs
+          <li> - Còctels / Pica pica al Jardí
+          <li> - Celebracions familiars
+          <li> - Sopars d’empresa
+          <li> - Convencions / Presentacions de productes</li>
+        </ul>"
+  map:
+    tagline: "Carretera C-12, KM 153. Entre Corbins i Torrelameu."
+  footer:
+    itnig: "Itnig, serveis web"

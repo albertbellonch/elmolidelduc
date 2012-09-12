@@ -1,0 +1,32 @@
+!!! 5
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => I18n.locale }
+  %head
+    %title El Molí del Duc
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "content-type"}
+    %meta{:content => yield(:meta_keywords), :name => "keywords"}
+    %meta{:content => yield(:meta_description), :name => "description"}
+    %meta{:content => "Itnig", :name => "author"}
+    %meta{:content => "Itnig", :name => "generator"}
+    %meta{:content => "Itnig", :name => "origen"}
+    %meta{:content => t(:locality), :name => "locality"}
+    %meta{:content => I18n.locale, :name => "language"}
+    %meta{:content => "index, follow", :name => "robots"}
+    %meta{:content => t(:geo_region), :name => "geo.region"}
+    %meta{:content => t(:geo_placename), :name => "geo.placename"}
+    %meta{:content => t(:geo_position), :name => "geo.position"}
+    %meta{:content => t(:icbm), :name => "ICBM"}
+    = csrf_meta_tag
+    = include_stylesheets 'screen', :media => :screen
+    /[if lt IE 8 ]
+      = stylesheet_link_tag 'ie', :media => 'screen, projection'
+  %body
+    -# if current_user
+      = render "shared/admin_preheader"
+    = render 'shared/header'
+
+    #info_box
+      = yield
+
+    = render 'shared/footer'
+
+    = include_javascripts :frontend

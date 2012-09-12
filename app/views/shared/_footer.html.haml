@@ -1,0 +1,9 @@
+#footer
+  #itnig= link_to t(:itnig, :scope => "footer"), "http://itnig.net", :target => "_blank"
+  #animation
+    #play
+      = link_to "javascript:changeHustle();" do
+        = image_tag "play.png"
+    #pause{:style => "display: none"}
+      = link_to "javascript:changeHustle();" do
+        = image_tag "pause.png"

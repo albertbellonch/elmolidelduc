@@ -1,0 +1,9 @@
+= render "admin/shared/asset-picker", :owner => @page
+
+= simple_form_for [:admin, @page ] do |f|
+  = f.input :body, :label => "Body", :input_html => { :class => "editor" }
+  #pseudodroppable <!-- Needed for image drag and drop -->
+
+  = f.button :submit, :id => "editor-button"
+
+.back_link= link_to 'Back', admin_pages_path

@@ -1,0 +1,7 @@
+= simple_form_for [:admin, @page, @page_content ] do |f|
+  %fieldset
+    = f.input :url, :required => false, :input_html => {:type => :text}
+
+    = f.button :submit, :id => "editor-button"
+
+.back_link= link_to 'Atrás', admin_pages_path

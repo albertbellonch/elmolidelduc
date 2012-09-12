@@ -1,0 +1,32 @@
+%h1 Detalle de noticia
+.separations
+
+%p
+  %b Título:
+  = @post.title
+%p
+  %b Cuerpo:
+  = simple_format @post.body
+%p
+  %b Fecha:
+  = @post.date
+%p
+  %b Usuario:
+  = @post.user.email
+%p
+  %b Publicado?:
+  = @post.published
+.clear
+%p
+  %span#comments_count
+    %b= pluralize(@post.comments.count, "comentario")
+  %br
+  %br
+  %div#comments
+  - @post.comments.each do |comment|
+    = render "comments/show", :comment => comment
+    %br
+
+= link_to 'Editar', edit_admin_post_path(@post)
+\|
+= link_to 'Atrás', admin_posts_path

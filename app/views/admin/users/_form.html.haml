@@ -1,0 +1,5 @@
+= simple_form_for [:admin, @user], :html => {:class => :bp} do |f|
+  %fieldset
+    = f.input :login, :label => "Usuario"
+    = f.input :password, :label => "Contraseña"
+    = f.button :submit, @user.new_record? ? "Crear" : "Actualizar"

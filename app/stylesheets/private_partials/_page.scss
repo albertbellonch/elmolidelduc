@@ -1,0 +1,249 @@
+// . . . . . . . . . . . . . . . .  USER_MENU
+#user_menu {
+  background-image: url("/images/back_user_menu.png");
+  background-repeat: repeat-x;
+  text-align: right;
+  color: #999;
+  height: 2.2em;
+  padding: 0.5em;
+  li {
+    @include text-shadow(black, -1px, -1px, 0);
+    border-right: 1px solid #999;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+  a {
+    @include text-shadow(black, -1px, -1px, 0);
+    color: #999;
+    &:hover { color: white; }
+  }
+}
+
+
+// . . . . . . . . . . . . . . . .  MENU
+
+#menu {
+  background-image: url("/images/back_menu.png");
+  background-repeat: repeat-x;
+  border-top: 1px solid #d4d9df;
+  border-bottom: 1px solid #d4d9df;
+  outline: 1px solid white;
+  text-align: center;
+  padding: 1.3em 1em;
+  height: 1.9em;
+  li {
+    @include text-shadow(white, 1px, -1px, 0);
+    border-left: 1px solid $font-color;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  li:first-child{
+    border-left: none;
+  }
+  a {
+    @include text-shadow(white, 1px, -1px, 0);
+    color: #666;
+    &:hover { color: black; }
+  }
+}
+
+
+
+// . . . . . . . . . . . . . . . .  Content
+
+
+#content {
+  background-color: white;
+  margin-left: 2em;
+  margin-right: 2em;
+  padding: 2em 1em;
+
+  h1 {
+    font-size: 1.5em;
+    color: #999;
+    line-height: 2em;
+  }
+
+  table {
+    outline: 1px solid #CCC;
+    margin: 0 auto;
+    th {
+      background-color: #ccc;
+      border: 1px solid white;
+      padding: 0.5em 1em;
+    }
+    td {
+      border: 1px solid white;
+      font-size: 0.9em;
+      padding: 0.5em 1em;
+    }
+    tr:nth-child(even) {
+      background: $bg-color;
+    }
+
+    td a{
+      color: $blue-color;
+      padding: 0.3em;
+      &:hover {
+        background-color: white;
+      }
+    }
+    ul.sub_options {
+      margin-top: 1em;
+      li
+        a{padding-left: 0;}
+    }
+  }
+  .input boolean optional {
+    margin-top: 2em;
+  }
+  
+  .back_link {
+    margin-top: 2em;
+    a {
+      background-color: $blue-color;
+      color: white;
+      text-decoration: none;
+      padding: 0.2em 1em;
+      &:hover {
+        background-color: #999;
+      }
+    }
+  }
+  
+  .show_and_newlink {
+    margin-top: 2em;
+    margin-left: 0.5em;
+    a {
+      color: $blue-color;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#login_container {
+  margin: 0 auto;
+  width:400px;
+  @include span(10);
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+}
+
+a:hover.homelink {
+  color: #ffffff;
+  background-color: #444444;
+  padding: 1px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+#loginbox  {
+  border: #999999 solid 2px;
+  background-color:#f1f1f1;
+  margin-top:20px;
+  padding-top:10px;
+  height: 300px;
+}
+
+
+#logo{
+  margin-top: 50px;
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.info_form{
+  color: #666666;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.info_form_error{
+  color: #666666;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#errorExplanation {
+  background-color:#f1f1f1;
+}
+
+input.loginput   {
+  font-family: Verdana;
+  color: #333333;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  height: 30px;
+  width: 275px;
+  padding: 2px;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+}
+
+
+input#user_session_submit{
+  background-color: #000000;
+  border: none;
+  color: #dddddd;
+  width: 125px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: normal;
+  margin: 10px;
+}
+
+input.button {
+  background-color: #000000;
+  border: none;
+  color: #dddddd;
+  width: 125px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+input.button:hover {
+  border: 1px solid #666;
+  background-color: #555;
+  cursor: pointer;
+}
+
+#credits {
+  text-align:center;
+  margin-top:20px;
+}
+
+

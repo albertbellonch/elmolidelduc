@@ -1,0 +1,7 @@
+%h1 Nueva página dinámica
+.separations
+
+= simple_form_for [:admin, @page] do |f|
+  %fieldset
+    = f.input :key
+    = f.button :submit

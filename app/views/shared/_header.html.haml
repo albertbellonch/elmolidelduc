@@ -1,0 +1,46 @@
+#header
+  #left
+    = image_tag "logo.png", :id => "logo"
+    - tabs = [{:name => "moli", :link => "#", :paragraphs => 4}, {:name => "farinera", :link => "#", :paragraphs => 4}, {:name => "galeria", :link => "#", :paragraphs => 4}]
+    #menu
+      - tabs.each do |tab|
+        = link_to t(tab[:name], :scope => "menu"), tab[:link], :id => "#{tab[:name]}-link"
+  #right
+    #lang
+      = link_to "Català", "/ca", :class => I18n.locale==:ca ? "current" : ""
+      = link_to "Castellano", "/es", :class => I18n.locale==:es ? "current" : ""
+    #social
+      = link_to "", "https://www.facebook.com/profile.php?id=100002487677977", :id => "facebook", :target => "_blank"
+      = link_to "", "https://twitter.com/#!/Elmoldelduc", :id => "twitter", :target => "_blank"
+    #links
+      = link_to t("localization", :scope => "header"), "#map", :rel => "facebox"
+      #map{:style => "display:none;"}
+        %img{:src => "http://maps.googleapis.com/maps/api/staticmap?center=41.6953,0.7071&zoom=14&size=500x420&maptype=roadmap&markers=color:red%7Clabel:El+Molí+Del+Duc%7C41.6953,0.7071&sensor=false"}
+        %p= t("tagline", :scope => "map")
+      = link_to t("contact", :scope => "header"), "#contact", :rel => "facebox"
+      #contact{:style => "display: none;"}
+        .center
+          %p
+            %b El Molí del Duc
+            %br
+            Restaurant - Saló de Banquets
+            %br
+            %b Telèfon
+            973 190 510
+        - form_tag info_path do
+          .field
+            = label_tag :name, t("name", :scope => "form")
+            = text_field_tag :name
+          .field
+            = label_tag :email, t("email", :scope => "form")
+            = text_field_tag :email
+          .field
+            = label_tag :phone, t("phone", :scope => "form")
+            = text_field_tag :phone
+          .field
+            = label_tag :message, t("message", :scope => "form")
+            = text_area_tag :message, nil, :rows => 20
+          .clearboth
+          .submit
+            = submit_tag t("send", :scope => "form")
+.clearboth

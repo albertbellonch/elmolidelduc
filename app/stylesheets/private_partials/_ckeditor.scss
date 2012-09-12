@@ -1,0 +1,55 @@
+.asset_picker{
+  padding: 5px;
+  width: 10.5em;
+  height: 585px;
+  overflow: auto;
+  float: right;
+  font-size: 0.8em;
+  label{
+    display: none;
+  }
+  #image_file{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 11em;
+    height: 1.8em;
+  }
+}
+
+// Show image on hover
+#images .image {
+  text-align: center;
+  position: relative;
+}
+
+#images .destroy{
+  position: absolute;
+  right: 30px;
+  bottom: 55px;
+  display: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url("/images/destroy.png") no-repeat 0 0;
+}
+
+#images div:hover .destroy{
+  display: block;
+}
+
+#images .destroy:hover {
+  background-position: 0 -20px;
+}
+
+// Hide form and sons
+#images form{
+  display: none;
+}
+
+#images form div{
+  display: none;
+}
+
+#images form div input{
+  display: none;
+}

@@ -1,0 +1,50 @@
+es:
+  header:
+    localization: "Localización"
+    contact: "Contacto"
+  form:
+    name: "Nombre"
+    email: "Correo"
+    phone: "Teléfono"
+    message: "Mensaje"
+    send: "Enviar"
+  menu:
+    moli: "El Molí del Duc"
+    farinera: "Antigua Harinera"
+    galeria: "Espacios y eventos"
+  content:
+    moli:
+      paragraph_1: "El Molí Del Duc es un complejo para celebraciones que gira en torno al antiguo molino harinero de Corbins (Lleida) construido en el año 1929 y que actualmente se encuentra en un óptimo estado de conservación."
+      paragraph_2: "En el Molí del Duc disponemos de espacios donde la Historia y la Tradición se funden para dar paso a una cocina actual y de calidad; estos ingredientes os llevarán a pasar una velada inolvidable."
+      paragraph_3: "El recorrido se inicia en los Jardines, por un sinuoso camino que atraviesa la cascada que antiguamente movía todas las máquinas del molino. A continuación se puede realizar una visita guiada a la harinera, después de la cual se accede a los jardines superiores que están dotados de vistas panorámicas de toda la “horta de Lleida”. Las salas son los antiguos graneros rehabilitados, en los cuales resalta la espectacular cubierta formada por cerchas de madera."
+      paragraph_4: "En el Molí del Duc un equipo de profesionales trabaja día a día para conseguir que cada velada sea única y especial."
+    farinera:
+      paragraph_1: "El Molí del Duc gira en torno del antiguo molino harinero de Corbins. En 1929 esta industria empezó la actividad, siendo una de las harineras de referencia en provincia, aunque el primer asentamiento harinero data del siglo XVIII y hoy en día aún se conservan las piedras que formaban esa primera implantación."
+      paragraph_2: "En 1929 se construye la harinera como es en la actualidad, aprovechando la cascada de agua de la acequia de riego que atraviesa Corbins y Torrelameu. Con la energía mecánica que se produce con una turbina se mueve un sistema de correas que a su vez hace funcionar la maquinaria del molino."
+      paragraph_3: "La harinera se concentra en un edificio de tres plantas y sótano; tanto las máquinas como los tubos que conducían el trigo son de madera, material que convierte al molino en una pieza de gran belleza estética."
+      paragraph_4: "El año 1980 se optó por cerrar la fábrica ya que la maquinaria había quedado obsoleta. Veinte años más tarde comenzaron los trabajos de restauración para que el molino de Corbins pudiese abrir al público y de esa forma recuperar una pieza tan significativa del patrimonio histórico de nuestra tierra."
+    galeria:
+      paragraph_1: "<b>Espacios</b>"
+      paragraph_2:
+        "<ul>
+          <li> - <b>El Graner</b>: es la sala principal del complejo, con capacidad de 300 personas</li>
+          <li> - <b>Sala Rosa</b>: sala para 100 personas con vistas a Corbins y a la Horta de Lleida.</li>
+          <li> - <b>Jardines exteriores</b>: la zona ajardinada disfruta de unas excelentes vistas panorámicas.</li>
+          <li> - <b>Cocina</b>: el Moli del Duc disfruta de una cocina de calidad y de la tierra.</li>
+          <li> - <b>Sala para celebraciones Civiles</b>: Sala per celebraciones Civiles: Se puede habilitar esta sala o el jardín para ese tipo de celebraciones.</li>
+          <li> - <b>Aparcamiento</b>: más de 400 plazas de aparcamiento y zona especial reservada para novios y familia más cercana.</li>
+        </ul>"
+      paragraph_3: "<b>Eventos</b>"
+      paragraph_4:
+        "<ul>
+          <li> - Bodas / Banquetes
+          <li> - Comuniones / Bautizos
+          <li> - Cócteles / Pica pica en el Jardín
+          <li> - Celebraciones familiares
+          <li> - Cenas de empresa
+          <li> - Convenciones / Presentaciones de productos</li>
+        </ul>"
+  map:
+    tagline: "Carretera C-12, KM 153. Entre Corbins y Torrelameu."
+  footer:
+    itnig: "Itnig, servicios web"

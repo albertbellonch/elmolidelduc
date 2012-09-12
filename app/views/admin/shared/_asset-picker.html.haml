@@ -1,0 +1,22 @@
+.asset_picker
+  %b Subir imagen
+  = render "admin/images/form", :owner => owner
+  #images
+    - owner.images.each do |image|
+      = render "admin/images/image", :image => image
+
+- content_for :custom_js do
+  :javascript
+    $(document).ready(function() {
+      $('#image_file').change(function(){
+        $(this).parent().parent().ajaxSubmit({
+          beforeSubmit: function(a,f,o) {
+            o.dataType = 'json';
+          },
+          complete: function(XMLHttpRequest, textStatus) {
+            $("#images").append(XMLHttpRequest.responseText);
+          },
+        });
+
+      });
+    });

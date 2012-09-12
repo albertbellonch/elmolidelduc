@@ -1,0 +1,14 @@
+%h1 Listado de subscriptores
+.separations
+
+%table
+  %tr
+    %th Nombre
+    %th Apellidos
+    %th Email
+
+  - @subscriptors.each do |x|
+    %tr
+      %td= x.name
+      %td= x.last_name
+      %td= x.email

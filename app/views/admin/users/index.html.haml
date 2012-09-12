@@ -1,0 +1,16 @@
+%h1 Usuarios en el sistema
+.separations
+
+%table
+  %tr
+    %th Usuario
+    %th Operaciones
+  - @users.each do |user|
+    %tr
+      %td= user.login
+      %td
+        = link_to "Editar", edit_admin_user_path(user)
+        |
+        = link_to "Eliminar", [:admin, user], :method => :delete, :confirm => "Estás seguro?"
+
+.show_and_newlink= link_to "Crear nuevo usuario", new_admin_user_path

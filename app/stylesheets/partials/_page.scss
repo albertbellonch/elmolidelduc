@@ -1,0 +1,152 @@
+// Import the non-default scaffolding module to help us get started.
+@import "blueprint/scaffolding";
+
+// This configuration will only apply the
+// blueprint styles to pages with a body class of "bp"
+// This makes it easier to have pages without blueprint styles
+// when you're using a single/combined stylesheet.
+
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction; }
+
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
+@include blueprint-scaffolding("body.bp");
+
+.clearboth{
+  clear: both;
+}
+
+body{
+  padding: 0 80px;
+}
+
+// HEADER
+#header{
+  margin-top: 0.5em;
+  #left{
+    float: left;
+    #menu{
+      width: 100%;
+      a{
+        display: inline-block;
+        color: #aaa;
+        text-decoration: none;
+        padding-right: 1em;
+        &.current, &:hover{
+          color: black;
+        }
+      }
+    }
+  }
+  #right{
+    float: right;
+    #lang, #social, #links{
+      display: block;
+      float: right;
+      clear: right;
+      margin-top: 1.1em;
+      a{
+        color: #aaa;
+        margin-left: 1em;
+        text-decoration: none;
+        &:hover{
+          color: black;
+        }
+      }
+    }
+    #lang{
+      a.current{
+        color: black;
+      }
+    }
+    #social{
+      #facebook, #twitter{
+        display: inline-block;
+        margin-left: 0.5em;
+        width: 32px;
+        height: 32px;
+      }
+      #facebook{
+        background-image: url("/images/facebook_bw.png");
+        &:hover{
+          background-image: url("/images/facebook.png");
+        }
+      }
+      #twitter{
+        background-image: url("/images/twitter_bw.png");
+        &:hover{
+          background-image: url("/images/twitter.png");
+        }
+      }
+    }
+  }
+}
+
+// MAIN
+#main{
+  #info{
+    width: 25%;
+    float: left;
+    #content{
+      display: block;
+      font-size: 13px;
+      margin-top: 1em;
+      p, li{
+        line-height: 1.5em;
+      }
+      p{
+        text-align: justify;
+        margin-bottom: 1em;
+      }
+      li{
+        list-style-type: none;
+      }
+    }
+  }
+  #slider-container{
+    width: 73%;
+    padding-top: 1%;
+    padding-left: 2%;
+    float: right;
+    #slider{
+      z-index: 2;
+    }
+    #loading{
+      z-index: 1;
+      margin-top: 10em;
+      text-align: center;
+      img{
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}
+
+// FOOTER
+#footer{
+  position: fixed;
+  bottom: 2em;
+  width: 88%;
+  #animation{
+    float: right;
+    #play, #pause{
+      display: inline;
+    }
+  }
+  #itnig{
+    float: right;
+    a{
+      color: #aaa;
+      margin-left: 1em;
+      text-decoration: none;
+      &:hover{
+        color: black;
+      }
+    }
+  }
+}
