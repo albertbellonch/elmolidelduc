@@ -160,6 +160,11 @@ body p {
   display: none;
 }
 
+.smally {
+  width: 30px;
+  height: 30px;
+}
+
 #user_menu {
   background-image: url("/images/back_user_menu.png");
   background-repeat: repeat-x;

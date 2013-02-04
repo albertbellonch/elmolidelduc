@@ -1,32 +1,41 @@
-class Admin::ImagesController < ApplicationController
+class Admin::ImagesController < Admin::AdminController
+  def index
+    @images = Image.all
+  end
+
+  def new
+    @image = Image.new
+  end
+
+  def edit
+    @image = Image.find params[:id]
+  end
+
   def create
-    puts "hey!"
-    @owner = get_owner
-    @image = @owner.images.build(params[:image])
-    puts @image
-    @image.save
+    @image = Image.new params[:image]
 
-    respond_to do |format|
-      format.html { render :layout => false }
+    if @image.save
+      redirect_to admin_root_path, :notice => "Nova imatge creada"
+    else
+      flash[:alert] = "Error en crear la imatge"
+      render :action => :new
     end
   end
 
-   def destroy
-    @image = Image.find(params[:id])
+  def update
+    @image = Image.find params[:id]
+
+    if @image.update_attributes params[:image]
+      redirect_to admin_root_path, :notice => "Imatge actualitzada"
+    else
+      flash[:alert] = "Error en modificar la imatge"
+      render :action => :new
+    end
+  end
+
+  def destroy
+    @image = Image.find params[:id]
     @image.destroy
-
-    respond_to do |format|
-      format.js
-    end
-  end
-
-private
-  def get_owner
-    params.each do |name, value|
-      if name =~ /(.+)_id$/
-        return $1.classify.constantize.find(value)
-      end
-    end
-    nil
+    redirect_to admin_root_path
   end
 end

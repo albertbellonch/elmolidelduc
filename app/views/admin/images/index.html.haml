@@ -1,0 +1,18 @@
+%h1 Llistat d'imatges
+.separations
+
+%table
+  %tr
+    %th Imatge
+    %th Tipus
+    %th Accions
+  - @images.each do |image|
+    %tr
+      %td= image_tag image.file.thumb.url, :class => 'smally'
+      %td= image.kind
+      %td
+        = link_to "Editar", edit_admin_image_path(image)
+        |
+        = link_to "Eliminar", [:admin, image], :method => :delete, :confirm => "Estàs segur?"
+
+.show_and_newlink= link_to "Nova imatge", new_admin_image_path

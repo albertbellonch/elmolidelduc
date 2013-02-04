@@ -1,2 +1,8 @@
-= simple_form_for [:admin, owner, Image.new], :html => { :multipart => true } do |f|
-  =f.input :file, :as => "file"
+= simple_form_for [:admin, @image], :html => {:class => :bp, :multipart => true} do |f|
+  %fieldset
+    - if @image.new_record?
+      = f.input :file, :label => "Imatge", :as => :file
+    - else
+      = image_tag @image.file.url
+    = f.input :kind, :label => "Tipus", :collection => Image::TYPES, :include_blank => false
+    = f.button :submit, @image.new_record? ? "Crear" : "Actualitzar"

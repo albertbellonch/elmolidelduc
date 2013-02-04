@@ -1,4 +1,8 @@
 // . . . . . . . . . . . . . . . .  USER_MENU
+.smally {
+  width: 30px;
+  height: 30px;
+}
 #user_menu {
   background-image: url("/images/back_user_menu.png");
   background-repeat: repeat-x;
@@ -102,7 +106,7 @@
   .input boolean optional {
     margin-top: 2em;
   }
-  
+
   .back_link {
     margin-top: 2em;
     a {
@@ -115,7 +119,7 @@
       }
     }
   }
-  
+
   .show_and_newlink {
     margin-top: 2em;
     margin-left: 0.5em;

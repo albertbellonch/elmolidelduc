@@ -18,7 +18,8 @@ Encen::Application.routes.draw do
     devise_for :users, :controllers => {:sessions => 'user_sessions'}
 
     namespace :admin do
-      root :to => "users#index"
+      resources :images, :except => :show
+      root :to => "images#index"
     end
 
     match 'events' => 'static#events'
