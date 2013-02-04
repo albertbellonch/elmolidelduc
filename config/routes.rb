@@ -18,22 +18,6 @@ Encen::Application.routes.draw do
     devise_for :users, :controllers => {:sessions => 'user_sessions'}
 
     namespace :admin do
-      resources :users, :except => :index
-      resources :subscriptors, :only => [:index, :destroy]
-
-      resources :posts do
-        resources :comments, :only => :create
-        resources :images, :only => :create
-      end
-
-      resources :comments, :only => :destroy
-      resources :images, :only => :destroy
-
-      resources :pages, :only => [:new, :create, :index, :destroy, :edit, :update] do
-        resources :images, :only => :create
-        resources :page_contents, :only => [:edit, :update, :destroy, :new, :create]
-      end
-
       root :to => "users#index"
     end
 
