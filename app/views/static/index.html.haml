@@ -1,18 +1,1 @@
-#main
-  - tabs = [{:name => "moli", :link => "#", :paragraphs => 4}, {:name => "farinera", :link => "#", :paragraphs => 4}, {:name => "galeria", :link => "#", :paragraphs => 4}]
-  #info
-    #content
-      - tabs.each do |tab|
-        %div{:id => "#{tab[:name]}-content"}
-          - (1..tab[:paragraphs]).each do |i|
-            %p= raw t("paragraph_#{i}", :scope => "content.#{tab[:name]}")
-  #slider-container
-    #loading
-      = image_tag "logo_loading.png"
-    #slider.flexslider
-      - pics = %w{ portada_1 farinera_1 farinera_2 farinera_3 farinera_4 farinera_5 graner_1 graner_2 graner_3 graner_4 graner_5 graner_6 sala_1 sala_2 jardi_1 jardi_2 jardi_3 jardi_4 jardi_5 cuina_1 cuina_2 cuina_3 cuina_4 }
-      %ul.slides
-        - pics.each do |pic|
-          %li
-            = image_tag "pics/#{pic}.jpg"
-.clearboth
+

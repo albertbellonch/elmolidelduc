@@ -1,10 +1,10 @@
 #header
   #left
     = image_tag "logo.png", :id => "logo"
-    - tabs = [{:name => "moli", :link => "#", :paragraphs => 4}, {:name => "farinera", :link => "#", :paragraphs => 4}, {:name => "galeria", :link => "#", :paragraphs => 4}]
+    - tabs = [{:name => "moli", :link => root_path}, {:name => "farinera", :link => farinera_path}, {:name => "galeria", :link => events_path}]
     #menu
       - tabs.each do |tab|
-        = link_to t(tab[:name], :scope => "menu"), tab[:link], :id => "#{tab[:name]}-link"
+        = link_to t(tab[:name], :scope => "menu"), tab[:link], :id => "#{tab[:name]}-link", :class => (tab[:name] == @info[:name]) ? 'current' : ''
   #right
     #lang
       = link_to "Català", "/ca", :class => I18n.locale==:ca ? "current" : ""

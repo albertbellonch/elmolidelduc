@@ -1,3 +1,5 @@
+- tabs = [{:name => "moli", :link => "#", :paragraphs => 4}, {:name => "farinera", :link => "#", :paragraphs => 4}, {:name => "galeria", :link => "#", :paragraphs => 4}]
+
 !!! 5
 %html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => I18n.locale }
   %head
@@ -25,7 +27,21 @@
     = render 'shared/header'
 
     #info_box
-      = yield
+      #main
+        #info
+          #content
+            %div{:id => "#{@info[:name]}-content"}
+              - (1..@info[:paragraphs]).each do |i|
+                %p= raw t("paragraph_#{i}", :scope => "content.#{@info[:name]}")
+        #slider-container
+          #loading
+            = image_tag "logo_loading.png"
+          #slider.flexslider
+            %ul.slides
+              - @pics.each do |pic|
+                %li
+                  = image_tag "pics/#{pic}.jpg"
+      .clearboth
 
     = render 'shared/footer'
 

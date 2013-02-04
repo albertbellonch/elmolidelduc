@@ -25,7 +25,7 @@ function showOrHideTab(tab, show){
 
 // Bind click to show tab
 $("#menu a").click(function(){
-  showTab($(this).attr("id").split("-")[0]);
+  //showTab($(this).attr("id").split("-")[0]);
 });
 
 // Show a specific tab when loading
@@ -35,7 +35,7 @@ function tabToLoad(){
   return hash.split("#")[1];
 }
 
-showTab("moli");
+//showTab("moli");
 
 // Facebox
 $(document).ready(function(){

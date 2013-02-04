@@ -37,6 +37,8 @@ Encen::Application.routes.draw do
       root :to => "users#index"
     end
 
+    match 'events' => 'static#events'
+    match 'farinera' => 'static#farinera'
     root :to => "static#index"
   end
 end
