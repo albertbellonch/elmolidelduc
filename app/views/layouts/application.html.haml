@@ -38,9 +38,8 @@
             = image_tag "logo_loading.png"
           #slider.flexslider
             %ul.slides
-              - @pics.each do |pic|
-                %li
-                  = image_tag "pics/#{pic}.jpg"
+              - @images.each do |image|
+                %li= image_tag image.file.url
       .clearboth
 
     = render 'shared/footer'
