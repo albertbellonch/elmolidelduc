@@ -8,7 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage APP_CONFIG["storage"]
 
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "system/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   # Thumb version
